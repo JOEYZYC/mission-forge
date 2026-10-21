@@ -3,7 +3,7 @@
 
 # Contributor progression bot
 
-`mfcp-progress-bot` verifies GitHub evidence and records contributor progress.
+`mfcp-progress` verifies GitHub evidence and records contributor progress.
 The repository ID is `1428030862`. Repository variables `MFCP_APP_ID` and
 `MFCP_APP_SLUG` identify the App; `MFCP_APP_PRIVATE_KEY` is an Actions secret.
 The App needs Contents, Issues and Pull requests write permissions and Checks
@@ -26,7 +26,7 @@ actual merged PRs.
 ## Task commands
 
 Post commands as new comments on a `kind/task` issue. Edited command comments
-are rejected. Put `@mfcp-progress-bot configure` on the first line, followed by
+are rejected. Put `@mfcp-progress configure` on the first line, followed by
 exactly one fenced `json` block. Substitute actual registered usernames and
 evidence URLs in the following field descriptions.
 
