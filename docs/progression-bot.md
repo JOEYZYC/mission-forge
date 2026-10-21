@@ -72,6 +72,15 @@ participant. The bot enables auto-merge after these conditions pass.
 - `Contributor notifications`: serializes congratulations and retries hourly.
 - `Contributor directory`: builds and deploys the public GitHub Pages directory.
 
+PR checks run automatically on `pull_request_target`, including for first-time
+contributors. Validation code and npm dependencies come from the default branch.
+The repository check reads the proposed merge as data, validates contributor
+JSON and rules, checks JavaScript syntax without running submitted scripts,
+and builds the directory with trusted code. PR checks receive read-only tokens
+and no App private key. Runtime changes execute after reviewed merge to main.
+The public-repository approval setting still applies to any future workflow
+that uses `pull_request` to execute contributor-supplied code.
+
 Main requires `JSON format and fields`, `validate` and `Progression integrity`
 from GitHub Actions with an up-to-date base. A separate PR ruleset lets only
 the progression App bypass the PR requirement. The App cannot bypass required
